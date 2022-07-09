@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Parameters -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore your destiny!</title>
+    <link
+      rel="shortcut icon"
+      href="https://gist.githubusercontent.com/maykbrito/0acdf4ce919838ffed50915a31fc5b23/raw/6f4dd01ec3116428ec4c99255944cb9ac7927590/cristal-ball.svg"
+      type="image/x-icon"
+    />
+
+    <!-- Files Import -->
+    <script src="./scripts/index.js" defer></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <img
+        src="https://gist.githubusercontent.com/maykbrito/0acdf4ce919838ffed50915a31fc5b23/raw/6f4dd01ec3116428ec4c99255944cb9ac7927590/cristal-ball.svg"
+        alt="A Illustration of a Crystal Ball"
+      />
+
+      <h1 id="phrase"></h1>
+      <p>Click on ask question and your destiny will be revealed.</p>
+
+      <input id="inputQuestion" type="text" placeholder="Type your question" />
+      <button id="buttonAsk" onclick="askQuestion()">Ask Question</button>
+
+      <h3 id="answer"></h3>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
