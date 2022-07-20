@@ -1,22 +1,27 @@
 /* ====== IMPORTS ====== */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
-@import './reset.css';
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
 
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* ====== LAYOUT ====== */
 body {
   background-color: black;
   color: white;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
 }
 
-#container {
+main {
   width: 100%;
-  max-width: 28rem;
+  max-width: 425px;
 
-  margin-top: 8rem;
+  margin-top: 128px;
   margin-inline: auto;
 }
 
@@ -33,7 +38,6 @@ h1 {
 p {
   margin-bottom: 30px;
   padding-inline: 30px;
-  /* pequeno ajuste visual */
 
   opacity: 0.7;
 }
@@ -50,12 +54,11 @@ button {
 
 input {
   margin-bottom: 20px;
-  padding: 16px;
 }
 
 button {
   border: none;
-  background-color: blueviolet;
+  background-color: #8a2be2;
   color: white;
 
   transition: filter 0.2s;
@@ -67,13 +70,13 @@ button:hover {
 }
 
 /* ====== RESPONSES ====== */
-#response {
+#answer {
   margin-top: 30px;
 
   transition: opacity 1s;
 }
 
-#response div {
+#answer div {
   font-size: 16px;
   font-weight: normal;
   opacity: 0.9;
