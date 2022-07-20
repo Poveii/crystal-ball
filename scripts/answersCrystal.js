@@ -62,9 +62,8 @@ function askQuestion() {
 
   inputQuestion.value = "";
 
-  // disappear answer after 3 seconds
   setTimeout(function () {
     elementAnswer.style.opacity = 0;
     buttonAsk.removeAttribute("disabled");
-  }, 3000);
+  }, 3000); // disappear answer after 3 seconds
 }
