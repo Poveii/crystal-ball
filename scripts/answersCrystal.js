@@ -46,7 +46,7 @@ function verifyEmptyQuestion() {
     setTimeout(function () {
       elementAnswer.style.opacity = 0;
       buttonAsk.removeAttribute("disabled");
-    }, 2000);
+    }, 2000); // disappear answer after 2 seconds
 
     return true;
   } else return false;
@@ -58,6 +58,12 @@ function generateRandomNumbers(list) {
   return randomNumber;
 }
 
+function includesEasterEgg(easterEgg) {
+  if (inputQuestion.value.includes(easterEgg)) {
+    return true;
+  } else return false;
+}
+
 function askQuestion() {
   if (verifyEmptyQuestion() == false) {
     buttonAsk.setAttribute("disabled", true);
@@ -66,15 +72,28 @@ function askQuestion() {
 
     let anyNumberAnswers = generateRandomNumbers(answersQuestions);
 
-    elementAnswer.innerHTML = question + answersQuestions[anyNumberAnswers];
+    if (includesEasterEgg("can") == true) {
+      elementAnswer.innerHTML = "Everything will be alright!";
 
-    elementAnswer.style.opacity = 1;
+      elementAnswer.style.opacity = 1;
 
-    inputQuestion.value = "";
+      inputQuestion.value = "";
 
-    setTimeout(function () {
-      elementAnswer.style.opacity = 0;
-      buttonAsk.removeAttribute("disabled");
-    }, 3000); // disappear answer after 3 seconds
+      setTimeout(function () {
+        elementAnswer.style.opacity = 0;
+        buttonAsk.removeAttribute("disabled");
+      }, 4000); // disappear answer after 4 seconds
+    } else {
+      elementAnswer.innerHTML = question + answersQuestions[anyNumberAnswers];
+
+      elementAnswer.style.opacity = 1;
+
+      inputQuestion.value = "";
+
+      setTimeout(function () {
+        elementAnswer.style.opacity = 0;
+        buttonAsk.removeAttribute("disabled");
+      }, 3000); // disappear answer after 3 seconds
+    }
   }
 }
