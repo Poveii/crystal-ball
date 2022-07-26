@@ -23,22 +23,33 @@ const answersQuestions = [
   "Yes.",
   "Focus and ask again.",
   "Signs points to yes.",
+  "No.",
+];
+
+const answersEmptyQuestions = [
+  "You don't ask me anything...",
+  "Make me a question, come on!",
+  "Seriously? A question please.",
 ];
 
 /* ========= FUNCTIONS ========= */
 function verifyEmptyQuestion() {
   if (inputQuestion.value == "") {
+    buttonAsk.setAttribute("disabled", true);
+
     elementAnswer.style.opacity = 1;
 
-    elementAnswer.innerHTML = "You don't ask me anything...";
+    let anyNumberAnswers = generateRandomNumbers(answersEmptyQuestions);
+
+    elementAnswer.innerHTML = answersEmptyQuestions[anyNumberAnswers];
 
     setTimeout(function () {
       elementAnswer.style.opacity = 0;
       buttonAsk.removeAttribute("disabled");
-    }, 1500);
+    }, 2000);
 
-    return;
-  }
+    return true;
+  } else return false;
 }
 
 function generateRandomNumbers(list) {
@@ -48,7 +59,7 @@ function generateRandomNumbers(list) {
 }
 
 function askQuestion() {
-  if (verifyEmptyQuestion()) {
+  if (verifyEmptyQuestion() == false) {
     buttonAsk.setAttribute("disabled", true);
 
     const question = "<div>" + inputQuestion.value + "</div>";
