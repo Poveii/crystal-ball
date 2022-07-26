@@ -1,11 +1,11 @@
 <div align=center>
-  <img src="" alt="Crystal answers you">
+  <img src="https://user-images.githubusercontent.com/79858234/181106860-d10479cf-29c1-4710-a243-82c0777c5c05.gif" alt="Crystal answers you" />
 </div>
 
 # 🔮 Crystal Ball
 Crystal is here, to reveal your destiny a question have been made.
 
-<strong><a href="https://poveii.github.io/crystal-ball/">Answer her</a></strong>
+<strong><a href="https://poveii.github.io/crystal-ball/">Answer her →</a></strong>
 
 ## Tecnologies she's made
 - <strong>
@@ -21,9 +21,9 @@ Crystal is here, to reveal your destiny a question have been made.
       Javascript
   </strong>
   
-## Somethings that she do and will do (someday)
-- [ ] -----------------------------------------
+## Somethings she do or will do (someday)
+- [ ] Talk to you about Pop Culture
 - [ ] -----------------------------------------
 - [ ] -----------------------------------------
 
-### This Project is my sequel to Maratona Explorer's project of Rocketseat.
+### This Project is my sequel to first Maratona Explorer's project of Rocketseat.
