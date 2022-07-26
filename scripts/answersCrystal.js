@@ -48,22 +48,22 @@ function generateRandomNumbers(list) {
 }
 
 function askQuestion() {
-  verifyEmptyQuestion();
+  if (verifyEmptyQuestion()) {
+    buttonAsk.setAttribute("disabled", true);
 
-  buttonAsk.setAttribute("disabled", true);
+    const question = "<div>" + inputQuestion.value + "</div>";
 
-  const question = "<div>" + inputQuestion.value + "</div>";
+    let anyNumberAnswers = generateRandomNumbers(answersQuestions);
 
-  let anyNumberAnswers = generateRandomNumbers(answersQuestions);
+    elementAnswer.innerHTML = question + answersQuestions[anyNumberAnswers];
 
-  elementAnswer.innerHTML = question + answersQuestions[anyNumberAnswers];
+    elementAnswer.style.opacity = 1;
 
-  elementAnswer.style.opacity = 1;
+    inputQuestion.value = "";
 
-  inputQuestion.value = "";
-
-  setTimeout(function () {
-    elementAnswer.style.opacity = 0;
-    buttonAsk.removeAttribute("disabled");
-  }, 3000); // disappear answer after 3 seconds
+    setTimeout(function () {
+      elementAnswer.style.opacity = 0;
+      buttonAsk.removeAttribute("disabled");
+    }, 3000); // disappear answer after 3 seconds
+  }
 }
