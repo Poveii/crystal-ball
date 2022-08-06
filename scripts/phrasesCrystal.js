@@ -1,6 +1,6 @@
 /* ========== VARIABLES ========== */
-const elementPhrase = document.querySelector("#phrase");
-const phrasesQuestions = [
+const phraseElement = document.querySelector("#phrase");
+const phraseList = [
   "I will reveal your destiny!",
   "What are you going to ask me now?",
   "Have something in mind? Make a question",
@@ -16,9 +16,9 @@ function generateRandomNumbers(list) {
 }
 
 function phraseCrystalBall() {
-  let anyNumberPhrases = generateRandomNumbers(phrasesQuestions);
+  let anyNumberToPhrases = generateRandomNumbers(phraseList);
 
-  elementPhrase.innerHTML = phrasesQuestions[anyNumberPhrases];
+  phraseElement.innerHTML = phraseList[anyNumberToPhrases];
 }
 
 /* ========== EXECUTION ========== */
