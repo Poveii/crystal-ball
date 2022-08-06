@@ -48,7 +48,7 @@ button {
   width: 100%;
 
   padding: 16px;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 4px;
 }
 
@@ -77,7 +77,7 @@ button:hover {
 }
 
 #answer div {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   opacity: 0.9;
 
