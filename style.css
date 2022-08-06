@@ -21,7 +21,7 @@ main {
   width: 100%;
   max-width: 425px;
 
-  margin-top: 128px;
+  margin-top: 60px;
   margin-inline: auto;
 }
 
@@ -72,6 +72,7 @@ button:hover {
 /* ====== RESPONSES ====== */
 #answer {
   margin-top: 30px;
+  margin-bottom: 40px;
 
   transition: opacity 1s;
 }
