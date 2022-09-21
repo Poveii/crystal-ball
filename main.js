@@ -3,6 +3,15 @@ const answerElement = document.querySelector("#answer");
 const inputQuestionElement = document.querySelector("#inputQuestion");
 const buttonAskElement = document.querySelector("#buttonAsk");
 
+const phraseElement = document.querySelector("#phrase");
+const phraseList = [
+  "I will reveal your destiny!",
+  "What are you going to ask me now?",
+  "Have something in mind? Make a question",
+  "I don't have all day, just make your question",
+  "I'm waiting for you ask me...",
+];
+
 const answersToQuestions = [
   "Of Course!",
   "I'm not so sure.",
@@ -34,9 +43,13 @@ const answersToEmptyQuestions = [
 
 /* ========= FUNCTIONS ========= */
 function generateRandomNumbers(list) {
-  const total = list.length;
-  const randomNumber = Math.floor(Math.random() * total);
-  return randomNumber;
+  return Math.floor(Math.random() * list.length);
+}
+
+function phraseCrystalBall() {
+  let anyNumberToPhrases = generateRandomNumbers(phraseList);
+
+  phraseElement.innerHTML = phraseList[anyNumberToPhrases];
 }
 
 function includesEasterEgg(easterEgg) {
@@ -100,3 +113,5 @@ function askQuestion() {
     }
   }
 }
+
+phraseCrystalBall();
