@@ -5,40 +5,40 @@ const buttonAskElement = document.querySelector("#buttonAsk");
 
 const phraseElement = document.querySelector("#phrase");
 const phraseList = [
-  "I will reveal your destiny!",
-  "What are you going to ask me now?",
-  "Have something in mind? Make a question",
-  "I don't have all day, just make your question",
-  "I'm waiting for you ask me...",
+  "Vou revelar seu destino!",
+  "O que você vai me perguntar agora?",
+  "Tem algo em mente? Faça uma pergunta",
+  "Eu não tenho o dia todo, só faça sua pergunta.",
+  "Eu estou esperando sua pergunta...",
 ];
 
 const answersToQuestions = [
-  "Of Course!",
-  "I'm not so sure.",
-  "It's decidedly so.",
-  "Don't count on it.",
-  "No doubt!",
-  "Ask again later.",
-  "Yes, definitely!",
-  "My answer is no.",
-  "You can count on that.",
-  "Better not tell you now.",
-  "In my view, yes.",
-  "My sources says no.",
-  "Probably.",
-  "It's not possible to predict now.",
-  "Good Outlook.",
-  "The prospects aren't so good.",
-  "Yes.",
-  "Focus and ask again.",
-  "Signs points to yes.",
-  "No.",
+  "Certeza!",
+  "Não tenho tanta certeza.",
+  "É decididamente assim.",
+  "Não conte com isso.",
+  "Sem dúvidas!",
+  "Pergunte novamente mais tarde.",
+  "Sim, definitivamente!",
+  "Minha resposta é não.",
+  "Você pode contar com isso.",
+  "Melhor não te dizer agora.",
+  "A meu ver, sim.",
+  "Minhas fontes dizem não.",
+  "Provavelmente.",
+  "Não é possível prever agora.",
+  "Perspectiva boa.",
+  "As perspectivas não são tão boas.",
+  "Sim.",
+  "Concentre-se e pergunte novamente.",
+  "Sinais apontam que sim.",
+  "Não.",
 ];
 
 const answersToEmptyQuestions = [
-  "You don't ask me anything...",
-  "Make me a question, come on!",
-  "Seriously? A question please.",
+  "Você não me perguntou nada...",
+  "Me faça uma pergunta, qual é!",
+  "Sério? Uma pergunta por favor.",
 ];
 
 /* ========= FUNCTIONS ========= */
@@ -87,8 +87,8 @@ function askQuestion() {
 
     let anyNumberToAnswers = generateRandomNumbers(answersToQuestions);
 
-    if (includesEasterEgg("can") === true) {
-      answerElement.innerHTML = "Everything will be alright!";
+    if (includesEasterEgg("consigo") === true) {
+      answerElement.innerHTML = "Tudo vai dar certo! Não se preocupa.";
 
       answerElement.style.opacity = 1;
 
