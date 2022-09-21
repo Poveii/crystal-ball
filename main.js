@@ -47,10 +47,12 @@ function generateRandomNumbers(list) {
 }
 
 function phraseCrystalBall() {
-  let anyNumberToPhrases = generateRandomNumbers(phraseList);
+  let randomNumberToPhrases = generateRandomNumbers(phraseList);
 
-  phraseElement.innerHTML = phraseList[anyNumberToPhrases];
+  phraseElement.innerHTML = phraseList[randomNumberToPhrases];
 }
+
+phraseCrystalBall();
 
 function includesEasterEgg(easterEgg) {
   if (inputQuestionElement.value.includes(easterEgg)) {
@@ -62,18 +64,12 @@ function verifyEmptyQuestion() {
   if (inputQuestionElement.value === "") {
     buttonAskElement.setAttribute("disabled", true);
 
-    answerElement.style.opacity = 1;
-
-    let anyNumberToEmptyAnswers = generateRandomNumbers(
+    let randomNumberToEmptyAnswers = generateRandomNumbers(
       answersToEmptyQuestions
     );
 
-    answerElement.innerHTML = answersToEmptyQuestions[anyNumberToEmptyAnswers];
-
-    setTimeout(function () {
-      answerElement.style.opacity = 0;
-      buttonAskElement.removeAttribute("disabled");
-    }, 2000); // disappear answer after 2 seconds
+    answerElement.innerHTML =
+      answersToEmptyQuestions[randomNumberToEmptyAnswers];
 
     return true;
   } else return false;
@@ -85,33 +81,22 @@ function askQuestion() {
 
     const question = "<div>" + inputQuestionElement.value + "</div>";
 
-    let anyNumberToAnswers = generateRandomNumbers(answersToQuestions);
+    let randomNumberToAnswers = generateRandomNumbers(answersToQuestions);
 
     if (includesEasterEgg("consigo") === true) {
       answerElement.innerHTML = "Tudo vai dar certo! Não se preocupa.";
-
-      answerElement.style.opacity = 1;
-
-      inputQuestionElement.value = "";
-
-      setTimeout(function () {
-        answerElement.style.opacity = 0;
-        buttonAskElement.removeAttribute("disabled");
-      }, 4000); // disappear answer after 4 seconds
     } else {
       answerElement.innerHTML =
-        question + answersToQuestions[anyNumberToAnswers];
-
-      answerElement.style.opacity = 1;
-
-      inputQuestionElement.value = "";
-
-      setTimeout(function () {
-        answerElement.style.opacity = 0;
-        buttonAskElement.removeAttribute("disabled");
-      }, 3000); // disappear answer after 3 seconds
+        question + answersToQuestions[randomNumberToAnswers];
     }
   }
-}
 
-phraseCrystalBall();
+  answerElement.style.opacity = 1;
+
+  inputQuestionElement.value = "";
+
+  setTimeout(function () {
+    answerElement.style.opacity = 0;
+    buttonAskElement.removeAttribute("disabled");
+  }, 3000); // disappear answer after 3 seconds
+}
