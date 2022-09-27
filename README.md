@@ -1,5 +1,5 @@
 <div align=center>
-  <img src="https://user-images.githubusercontent.com/79858234/181106860-d10479cf-29c1-4710-a243-82c0777c5c05.gif" alt="Um gif onde a Crystal te responde" />
+  <img src="https://user-images.githubusercontent.com/79858234/192415114-42348ed7-f9d8-4932-831a-f5aa0e420adb.gif" alt="Um gif onde a Crystal te responde" />
 </div>
 
 # 🔮 Crystal Ball
